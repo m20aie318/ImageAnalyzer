@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/imageNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Attributes"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/spinnerCategoryTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageNameEditText"
+        android:text="Search Category: "
+        android:layout_marginTop="16dp"
+        android:textSize="18sp" />
+
+    <Spinner
+        android:id="@+id/spinnerAttribute"
+        android:layout_below="@id/imageNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/spinnerCategoryTextView"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/fetchImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerAttribute"
+        android:layout_marginTop="16dp"
+        android:text="Search" />
+
+    <TextView
+        android:id="@+id/imageSizeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fetchImageButton"
+        android:layout_marginTop="16dp"
+        android:textSize="18sp" />
+
+    <ScrollView
+        android:id="@+id/imageScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/imageSizeTextView">
+
+        <LinearLayout
+            android:id="@+id/imageContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:padding="25dp" />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/readImagesButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fetchImageButton"
+        android:text="Read Images from Gallery and Store in Database" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/readImagesButton"
+        android:layout_marginTop="16dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter" />
+
+</RelativeLayout>

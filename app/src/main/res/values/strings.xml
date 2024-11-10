@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ImageAnalyzer</string>
+    <string-array name="attributes_array">
+        <item>Object Detection</item>
+        <item>Text Identification</item>
+        <item>Attribute Analysis</item>
+    </string-array>
+    <string name="current_gallery">CURRENT GALLERY</string>
+    <string name="search_results">SEARCH RESULTS</string>
+</resources>

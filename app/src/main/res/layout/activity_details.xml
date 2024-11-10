@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background Image with Border -->
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rounded_background"
+        android:scaleType="centerCrop" />
+
+    <!-- Top Icons Layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/transparent"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/backImg"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentStart="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_back" />
+
+        <ImageView
+            android:id="@+id/favorite_icon"
+            android:layout_marginTop="20dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="Favorite"
+            android:src="@drawable/ic_favorite" />
+    </RelativeLayout>
+
+    <!-- Overview Button Positioned to Overlap Between Background and Rounded Bar -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/overviewButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/rounded_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-30dp"
+        android:background="@drawable/orange_button_background"
+        android:fontFamily="@font/europa_regular_webfont"
+        android:text="Overview"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <!-- Rounded Bar and Digital Illustration -->
+    <LinearLayout
+        android:id="@+id/rounded_bar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/rounded_corner_top_background"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingTop="40dp"
+        android:paddingBottom="16dp">
+
+        <ImageView
+            android:id="@+id/pencil_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="0dp"
+            android:src="@drawable/pencil" />
+
+        <TextView
+            android:id="@+id/bottom_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/europa_regular_webfont"
+            android:gravity="center_vertical"
+            android:text="Image Illustration"
+            android:textColor="@android:color/black"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <!-- Expandable Detailed Section (Initially Hidden) -->
+
+    <LinearLayout
+        android:id="@+id/detailed_info_section"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/image_dimensions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:text="Dimensions"
+            style="@style/descriptionKey" />
+
+        <TextView
+            android:id="@+id/image_dimensions_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:text="NA"
+            style="@style/descriptionValue" />
+
+        <TextView
+            android:id="@+id/image_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:text="Size"
+            style="@style/descriptionKey" />
+
+        <TextView
+            android:id="@+id/image_size_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:text="NA"
+            style="@style/descriptionValue" />
+
+        <TextView
+            android:id="@+id/image_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:text="Date"
+            style="@style/descriptionKey" />
+
+        <TextView
+            android:id="@+id/image_date_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:text="NA"
+            style="@style/descriptionValue" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/objects_identified"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:text="Objects Detected"
+            style="@style/descriptionKey" />
+
+        <TextView
+            android:id="@+id/objects_identified_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:text="NA"
+            style="@style/descriptionValue" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/text_identified"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:text="Text Idenitfied"
+            style="@style/descriptionKey" />
+
+        <TextView
+            android:id="@+id/text_identified_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:text="NA"
+            style="@style/descriptionValue" />
+    </LinearLayout>
+</RelativeLayout>
